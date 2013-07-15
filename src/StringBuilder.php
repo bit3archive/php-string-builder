@@ -17,7 +17,7 @@ class StringBuilder
 {
 	/**
 	 * The current sequence.
-	 * 
+	 *
 	 * @var string
 	 */
 	protected $string;
