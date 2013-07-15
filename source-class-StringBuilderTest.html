@@ -8,7 +8,7 @@
 	<title>File test/StringBuilderTest.php | bit3/php-string-builder</title>
 
 	<script type="text/javascript" src="resources/combined.js?3245353428"></script>
-	<script type="text/javascript" src="elementlist.js?3325460278"></script>
+	<script type="text/javascript" src="elementlist.js?1509682966"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -336,85 +336,92 @@
 </span><span id="260" class="l"><a class="l" href="#260">260: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-num">14</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;length());
 </span><span id="261" class="l"><a class="l" href="#261">261: </a>    }
 </span><span id="262" class="l"><a class="l" href="#262">262: </a>
-</span><span id="263" class="l"><a class="l" href="#263">263: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testAppend" href="#_testAppend">testAppend</a>()
+</span><span id="263" class="l"><a class="l" href="#263">263: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testByteCount" href="#_testByteCount">testByteCount</a>()
 </span><span id="264" class="l"><a class="l" href="#264">264: </a>    {
-</span><span id="265" class="l"><a class="l" href="#265">265: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;append(<span class="php-quote">' The end is near!'</span>);
-</span><span id="266" class="l"><a class="l" href="#266">266: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World! The end is near!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="267" class="l"><a class="l" href="#267">267: </a>    }
-</span><span id="268" class="l"><a class="l" href="#268">268: </a>
-</span><span id="269" class="l"><a class="l" href="#269">269: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testPrepend" href="#_testPrepend">testPrepend</a>()
-</span><span id="270" class="l"><a class="l" href="#270">270: </a>    {
-</span><span id="271" class="l"><a class="l" href="#271">271: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;insert(<span class="php-num">0</span>, <span class="php-quote">'The end is near! '</span>);
-</span><span id="272" class="l"><a class="l" href="#272">272: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'The end is near! Hello § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="273" class="l"><a class="l" href="#273">273: </a>    }
-</span><span id="274" class="l"><a class="l" href="#274">274: </a>
-</span><span id="275" class="l"><a class="l" href="#275">275: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testInsert" href="#_testInsert">testInsert</a>()
-</span><span id="276" class="l"><a class="l" href="#276">276: </a>    {
-</span><span id="277" class="l"><a class="l" href="#277">277: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;insert(<span class="php-num">6</span>, <span class="php-quote">'The end is near! '</span>);
-</span><span id="278" class="l"><a class="l" href="#278">278: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello The end is near! § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="279" class="l"><a class="l" href="#279">279: </a>    }
-</span><span id="280" class="l"><a class="l" href="#280">280: </a>
-</span><span id="281" class="l"><a class="l" href="#281">281: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testReplace" href="#_testReplace">testReplace</a>()
-</span><span id="282" class="l"><a class="l" href="#282">282: </a>    {
-</span><span id="283" class="l"><a class="l" href="#283">283: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;replace(<span class="php-num">6</span>, <span class="php-num">7</span>, <span class="php-quote">'The end is near! '</span>);
-</span><span id="284" class="l"><a class="l" href="#284">284: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello The end is near! World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="285" class="l"><a class="l" href="#285">285: </a>    }
-</span><span id="286" class="l"><a class="l" href="#286">286: </a>
-</span><span id="287" class="l"><a class="l" href="#287">287: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testDelete" href="#_testDelete">testDelete</a>()
-</span><span id="288" class="l"><a class="l" href="#288">288: </a>    {
-</span><span id="289" class="l"><a class="l" href="#289">289: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;<span class="php-keyword2">delete</span>(<span class="php-num">5</span>, <span class="php-num">7</span>);
-</span><span id="290" class="l"><a class="l" href="#290">290: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'HelloWorld!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="291" class="l"><a class="l" href="#291">291: </a>    }
-</span><span id="292" class="l"><a class="l" href="#292">292: </a>
-</span><span id="293" class="l"><a class="l" href="#293">293: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testDeleteCharAt" href="#_testDeleteCharAt">testDeleteCharAt</a>()
-</span><span id="294" class="l"><a class="l" href="#294">294: </a>    {
-</span><span id="295" class="l"><a class="l" href="#295">295: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;deleteCharAt(<span class="php-num">6</span>);
-</span><span id="296" class="l"><a class="l" href="#296">296: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello  World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="297" class="l"><a class="l" href="#297">297: </a>    }
-</span><span id="298" class="l"><a class="l" href="#298">298: </a>
-</span><span id="299" class="l"><a class="l" href="#299">299: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testReverse" href="#_testReverse">testReverse</a>()
-</span><span id="300" class="l"><a class="l" href="#300">300: </a>    {
-</span><span id="301" class="l"><a class="l" href="#301">301: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;reverse();
-</span><span id="302" class="l"><a class="l" href="#302">302: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'!dlroW § olleH'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="303" class="l"><a class="l" href="#303">303: </a>    }
-</span><span id="304" class="l"><a class="l" href="#304">304: </a>
-</span><span id="305" class="l"><a class="l" href="#305">305: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testShorten" href="#_testShorten">testShorten</a>()
-</span><span id="306" class="l"><a class="l" href="#306">306: </a>    {
-</span><span id="307" class="l"><a class="l" href="#307">307: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">7</span>);
-</span><span id="308" class="l"><a class="l" href="#308">308: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello §'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="309" class="l"><a class="l" href="#309">309: </a>    }
-</span><span id="310" class="l"><a class="l" href="#310">310: </a>
-</span><span id="311" class="l"><a class="l" href="#311">311: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testExpand" href="#_testExpand">testExpand</a>()
-</span><span id="312" class="l"><a class="l" href="#312">312: </a>    {
-</span><span id="313" class="l"><a class="l" href="#313">313: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">15</span>);
-</span><span id="314" class="l"><a class="l" href="#314">314: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World! '</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="315" class="l"><a class="l" href="#315">315: </a>    }
-</span><span id="316" class="l"><a class="l" href="#316">316: </a>
-</span><span id="317" class="l"><a class="l" href="#317">317: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testExpandWithPadding" href="#_testExpandWithPadding">testExpandWithPadding</a>()
-</span><span id="318" class="l"><a class="l" href="#318">318: </a>    {
-</span><span id="319" class="l"><a class="l" href="#319">319: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">15</span>, <span class="php-quote">'123'</span>);
-</span><span id="320" class="l"><a class="l" href="#320">320: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World!1'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="321" class="l"><a class="l" href="#321">321: </a>    }
-</span><span id="322" class="l"><a class="l" href="#322">322: </a>
-</span><span id="323" class="l"><a class="l" href="#323">323: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testTrim" href="#_testTrim">testTrim</a>()
-</span><span id="324" class="l"><a class="l" href="#324">324: </a>    {
-</span><span id="325" class="l"><a class="l" href="#325">325: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;<span class="php-keyword2">trim</span>(<span class="php-quote">'H!'</span>);
-</span><span id="326" class="l"><a class="l" href="#326">326: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'ello § World'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="327" class="l"><a class="l" href="#327">327: </a>    }
-</span><span id="328" class="l"><a class="l" href="#328">328: </a>
-</span><span id="329" class="l"><a class="l" href="#329">329: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testLeftTrim" href="#_testLeftTrim">testLeftTrim</a>()
-</span><span id="330" class="l"><a class="l" href="#330">330: </a>    {
-</span><span id="331" class="l"><a class="l" href="#331">331: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;trimLeft(<span class="php-quote">'H!'</span>);
-</span><span id="332" class="l"><a class="l" href="#332">332: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'ello § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="333" class="l"><a class="l" href="#333">333: </a>    }
-</span><span id="334" class="l"><a class="l" href="#334">334: </a>
-</span><span id="335" class="l"><a class="l" href="#335">335: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testRightTrim" href="#_testRightTrim">testRightTrim</a>()
-</span><span id="336" class="l"><a class="l" href="#336">336: </a>    {
-</span><span id="337" class="l"><a class="l" href="#337">337: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;trimRight(<span class="php-quote">'H!'</span>);
-</span><span id="338" class="l"><a class="l" href="#338">338: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
-</span><span id="339" class="l"><a class="l" href="#339">339: </a>    }
-</span><span id="340" class="l"><a class="l" href="#340">340: </a>}
-</span><span id="341" class="l"><a class="l" href="#341">341: </a></span></code></pre>
+</span><span id="265" class="l"><a class="l" href="#265">265: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-num">15</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;byteCount());
+</span><span id="266" class="l"><a class="l" href="#266">266: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;changeEncoding(<span class="php-quote">'ISO-8859-1'</span>);
+</span><span id="267" class="l"><a class="l" href="#267">267: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-num">14</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;byteCount());
+</span><span id="268" class="l"><a class="l" href="#268">268: </a>    }
+</span><span id="269" class="l"><a class="l" href="#269">269: </a>
+</span><span id="270" class="l"><a class="l" href="#270">270: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testAppend" href="#_testAppend">testAppend</a>()
+</span><span id="271" class="l"><a class="l" href="#271">271: </a>    {
+</span><span id="272" class="l"><a class="l" href="#272">272: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;append(<span class="php-quote">' The end is near!'</span>);
+</span><span id="273" class="l"><a class="l" href="#273">273: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World! The end is near!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="274" class="l"><a class="l" href="#274">274: </a>    }
+</span><span id="275" class="l"><a class="l" href="#275">275: </a>
+</span><span id="276" class="l"><a class="l" href="#276">276: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testPrepend" href="#_testPrepend">testPrepend</a>()
+</span><span id="277" class="l"><a class="l" href="#277">277: </a>    {
+</span><span id="278" class="l"><a class="l" href="#278">278: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;insert(<span class="php-num">0</span>, <span class="php-quote">'The end is near! '</span>);
+</span><span id="279" class="l"><a class="l" href="#279">279: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'The end is near! Hello § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="280" class="l"><a class="l" href="#280">280: </a>    }
+</span><span id="281" class="l"><a class="l" href="#281">281: </a>
+</span><span id="282" class="l"><a class="l" href="#282">282: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testInsert" href="#_testInsert">testInsert</a>()
+</span><span id="283" class="l"><a class="l" href="#283">283: </a>    {
+</span><span id="284" class="l"><a class="l" href="#284">284: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;insert(<span class="php-num">6</span>, <span class="php-quote">'The end is near! '</span>);
+</span><span id="285" class="l"><a class="l" href="#285">285: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello The end is near! § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="286" class="l"><a class="l" href="#286">286: </a>    }
+</span><span id="287" class="l"><a class="l" href="#287">287: </a>
+</span><span id="288" class="l"><a class="l" href="#288">288: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testReplace" href="#_testReplace">testReplace</a>()
+</span><span id="289" class="l"><a class="l" href="#289">289: </a>    {
+</span><span id="290" class="l"><a class="l" href="#290">290: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;replace(<span class="php-num">6</span>, <span class="php-num">7</span>, <span class="php-quote">'The end is near! '</span>);
+</span><span id="291" class="l"><a class="l" href="#291">291: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello The end is near! World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="292" class="l"><a class="l" href="#292">292: </a>    }
+</span><span id="293" class="l"><a class="l" href="#293">293: </a>
+</span><span id="294" class="l"><a class="l" href="#294">294: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testDelete" href="#_testDelete">testDelete</a>()
+</span><span id="295" class="l"><a class="l" href="#295">295: </a>    {
+</span><span id="296" class="l"><a class="l" href="#296">296: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;<span class="php-keyword2">delete</span>(<span class="php-num">5</span>, <span class="php-num">7</span>);
+</span><span id="297" class="l"><a class="l" href="#297">297: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'HelloWorld!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="298" class="l"><a class="l" href="#298">298: </a>    }
+</span><span id="299" class="l"><a class="l" href="#299">299: </a>
+</span><span id="300" class="l"><a class="l" href="#300">300: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testDeleteCharAt" href="#_testDeleteCharAt">testDeleteCharAt</a>()
+</span><span id="301" class="l"><a class="l" href="#301">301: </a>    {
+</span><span id="302" class="l"><a class="l" href="#302">302: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;deleteCharAt(<span class="php-num">6</span>);
+</span><span id="303" class="l"><a class="l" href="#303">303: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello  World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="304" class="l"><a class="l" href="#304">304: </a>    }
+</span><span id="305" class="l"><a class="l" href="#305">305: </a>
+</span><span id="306" class="l"><a class="l" href="#306">306: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testReverse" href="#_testReverse">testReverse</a>()
+</span><span id="307" class="l"><a class="l" href="#307">307: </a>    {
+</span><span id="308" class="l"><a class="l" href="#308">308: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;reverse();
+</span><span id="309" class="l"><a class="l" href="#309">309: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'!dlroW § olleH'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="310" class="l"><a class="l" href="#310">310: </a>    }
+</span><span id="311" class="l"><a class="l" href="#311">311: </a>
+</span><span id="312" class="l"><a class="l" href="#312">312: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testShorten" href="#_testShorten">testShorten</a>()
+</span><span id="313" class="l"><a class="l" href="#313">313: </a>    {
+</span><span id="314" class="l"><a class="l" href="#314">314: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">7</span>);
+</span><span id="315" class="l"><a class="l" href="#315">315: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello §'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="316" class="l"><a class="l" href="#316">316: </a>    }
+</span><span id="317" class="l"><a class="l" href="#317">317: </a>
+</span><span id="318" class="l"><a class="l" href="#318">318: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testExpand" href="#_testExpand">testExpand</a>()
+</span><span id="319" class="l"><a class="l" href="#319">319: </a>    {
+</span><span id="320" class="l"><a class="l" href="#320">320: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">15</span>);
+</span><span id="321" class="l"><a class="l" href="#321">321: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World! '</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="322" class="l"><a class="l" href="#322">322: </a>    }
+</span><span id="323" class="l"><a class="l" href="#323">323: </a>
+</span><span id="324" class="l"><a class="l" href="#324">324: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testExpandWithPadding" href="#_testExpandWithPadding">testExpandWithPadding</a>()
+</span><span id="325" class="l"><a class="l" href="#325">325: </a>    {
+</span><span id="326" class="l"><a class="l" href="#326">326: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;setLength(<span class="php-num">15</span>, <span class="php-quote">'123'</span>);
+</span><span id="327" class="l"><a class="l" href="#327">327: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World!1'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="328" class="l"><a class="l" href="#328">328: </a>    }
+</span><span id="329" class="l"><a class="l" href="#329">329: </a>
+</span><span id="330" class="l"><a class="l" href="#330">330: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testTrim" href="#_testTrim">testTrim</a>()
+</span><span id="331" class="l"><a class="l" href="#331">331: </a>    {
+</span><span id="332" class="l"><a class="l" href="#332">332: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;<span class="php-keyword2">trim</span>(<span class="php-quote">'H!'</span>);
+</span><span id="333" class="l"><a class="l" href="#333">333: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'ello § World'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="334" class="l"><a class="l" href="#334">334: </a>    }
+</span><span id="335" class="l"><a class="l" href="#335">335: </a>
+</span><span id="336" class="l"><a class="l" href="#336">336: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testLeftTrim" href="#_testLeftTrim">testLeftTrim</a>()
+</span><span id="337" class="l"><a class="l" href="#337">337: </a>    {
+</span><span id="338" class="l"><a class="l" href="#338">338: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;trimLeft(<span class="php-quote">'H!'</span>);
+</span><span id="339" class="l"><a class="l" href="#339">339: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'ello § World!'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="340" class="l"><a class="l" href="#340">340: </a>    }
+</span><span id="341" class="l"><a class="l" href="#341">341: </a>
+</span><span id="342" class="l"><a class="l" href="#342">342: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_testRightTrim" href="#_testRightTrim">testRightTrim</a>()
+</span><span id="343" class="l"><a class="l" href="#343">343: </a>    {
+</span><span id="344" class="l"><a class="l" href="#344">344: </a>        <span class="php-var">$this</span>-&gt;stringBuilder-&gt;trimRight(<span class="php-quote">'H!'</span>);
+</span><span id="345" class="l"><a class="l" href="#345">345: </a>        <span class="php-var">$this</span>-&gt;assertEquals(<span class="php-quote">'Hello § World'</span>, <span class="php-var">$this</span>-&gt;stringBuilder-&gt;__toString());
+</span><span id="346" class="l"><a class="l" href="#346">346: </a>    }
+</span><span id="347" class="l"><a class="l" href="#347">347: </a>}
+</span><span id="348" class="l"><a class="l" href="#348">348: </a></span></code></pre>
 
 	<div id="footer">
 		bit3/php-string-builder API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
