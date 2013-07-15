@@ -389,7 +389,7 @@ class StringBuilder
 				$this->string .= $padding;
 			}
 			if ($newLength < $this->length()) {
-				$this->string = mb_substr($this->string, 0, $newLength);
+				$this->string = mb_substr($this->string, 0, $newLength, $this->encoding);
 			}
 		}
 
