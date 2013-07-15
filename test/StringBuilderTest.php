@@ -7,7 +7,7 @@
  *
  * @copyright  bit3 UG 2013
  * @author     Tristan Lins <tristan.lins@bit3.de>
- * @license    LGPL-3.0+
+ * @license    MIT
  */
 
 /**
