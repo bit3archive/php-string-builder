@@ -260,6 +260,13 @@ class StringBuilderTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(14, $this->stringBuilder->length());
 	}
 
+	public function testByteCount()
+	{
+		$this->assertEquals(15, $this->stringBuilder->byteCount());
+		$this->stringBuilder->changeEncoding('ISO-8859-1');
+		$this->assertEquals(14, $this->stringBuilder->byteCount());
+	}
+
 	public function testAppend()
 	{
 		$this->stringBuilder->append(' The end is near!');

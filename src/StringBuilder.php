@@ -207,6 +207,16 @@ class StringBuilder
 	}
 
 	/**
+	 * Return the byte count of this sequence.
+	 *
+	 * @return int
+	 */
+	public function byteCount()
+	{
+		return strlen($this->string);
+	}
+
+	/**
 	 * Append a string to the sequence.
 	 *
 	 * @param string $string
