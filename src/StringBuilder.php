@@ -190,7 +190,7 @@ class StringBuilder
 			throw new OutOfBoundsException();
 		}
 
-		$string = mb_substr($this->string, $start, $end !== null ? $end + 1 : null, $this->encoding);
+		$string = mb_substr($this->string, $start, $end !== null ? $end + 1 : $this->length(), $this->encoding);
 		$stringBuilder = new StringBuilder($string);
 		$stringBuilder->setEncoding($this->encoding);
 		return $stringBuilder;
@@ -248,7 +248,7 @@ class StringBuilder
 			mb_substr(
 				$this->string,
 				$offset,
-				null,
+				$this->length(),
 				$this->encoding
 			);
 		return $this;
@@ -284,7 +284,7 @@ class StringBuilder
 			mb_substr(
 				$this->string,
 				$end + 1,
-				null,
+				$this->length(),
 				$this->encoding
 			);
 		return $this;
@@ -317,7 +317,7 @@ class StringBuilder
 			mb_substr(
 				$this->string,
 				$end + 1,
-				null,
+				$this->length(),
 				$this->encoding
 			);
 		return $this;
@@ -347,7 +347,7 @@ class StringBuilder
 			mb_substr(
 				$this->string,
 				$index + 1,
-				null,
+				$this->length(),
 				$this->encoding
 			);
 		return $this;
