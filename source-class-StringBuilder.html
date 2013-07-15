@@ -266,7 +266,7 @@
 </span><span id="190" class="l"><a class="l" href="#190">190: </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> OutOfBoundsException();
 </span><span id="191" class="l"><a class="l" href="#191">191: </a>        }
 </span><span id="192" class="l"><a class="l" href="#192">192: </a>
-</span><span id="193" class="l"><a class="l" href="#193">193: </a>        <span class="php-var">$string</span> = <span class="php-keyword2">mb_substr</span>(<span class="php-var">$this</span>-&gt;string, <span class="php-var">$start</span>, <span class="php-var">$end</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$end</span> + <span class="php-num">1</span> : <span class="php-keyword1">null</span>, <span class="php-var">$this</span>-&gt;encoding);
+</span><span id="193" class="l"><a class="l" href="#193">193: </a>        <span class="php-var">$string</span> = <span class="php-keyword2">mb_substr</span>(<span class="php-var">$this</span>-&gt;string, <span class="php-var">$start</span>, <span class="php-var">$end</span> !== <span class="php-keyword1">null</span> ? <span class="php-var">$end</span> + <span class="php-num">1</span> : <span class="php-var">$this</span>-&gt;length(), <span class="php-var">$this</span>-&gt;encoding);
 </span><span id="194" class="l"><a class="l" href="#194">194: </a>        <span class="php-var">$stringBuilder</span> = <span class="php-keyword1">new</span> StringBuilder(<span class="php-var">$string</span>);
 </span><span id="195" class="l"><a class="l" href="#195">195: </a>        <span class="php-var">$stringBuilder</span>-&gt;setEncoding(<span class="php-var">$this</span>-&gt;encoding);
 </span><span id="196" class="l"><a class="l" href="#196">196: </a>        <span class="php-keyword1">return</span> <span class="php-var">$stringBuilder</span>;
@@ -324,7 +324,7 @@
 </span><span id="248" class="l"><a class="l" href="#248">248: </a>            <span class="php-keyword2">mb_substr</span>(
 </span><span id="249" class="l"><a class="l" href="#249">249: </a>                <span class="php-var">$this</span>-&gt;string,
 </span><span id="250" class="l"><a class="l" href="#250">250: </a>                <span class="php-var">$offset</span>,
-</span><span id="251" class="l"><a class="l" href="#251">251: </a>                <span class="php-keyword1">null</span>,
+</span><span id="251" class="l"><a class="l" href="#251">251: </a>                <span class="php-var">$this</span>-&gt;length(),
 </span><span id="252" class="l"><a class="l" href="#252">252: </a>                <span class="php-var">$this</span>-&gt;encoding
 </span><span id="253" class="l"><a class="l" href="#253">253: </a>            );
 </span><span id="254" class="l"><a class="l" href="#254">254: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
@@ -360,7 +360,7 @@
 </span><span id="284" class="l"><a class="l" href="#284">284: </a>            <span class="php-keyword2">mb_substr</span>(
 </span><span id="285" class="l"><a class="l" href="#285">285: </a>                <span class="php-var">$this</span>-&gt;string,
 </span><span id="286" class="l"><a class="l" href="#286">286: </a>                <span class="php-var">$end</span> + <span class="php-num">1</span>,
-</span><span id="287" class="l"><a class="l" href="#287">287: </a>                <span class="php-keyword1">null</span>,
+</span><span id="287" class="l"><a class="l" href="#287">287: </a>                <span class="php-var">$this</span>-&gt;length(),
 </span><span id="288" class="l"><a class="l" href="#288">288: </a>                <span class="php-var">$this</span>-&gt;encoding
 </span><span id="289" class="l"><a class="l" href="#289">289: </a>            );
 </span><span id="290" class="l"><a class="l" href="#290">290: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
@@ -393,7 +393,7 @@
 </span><span id="317" class="l"><a class="l" href="#317">317: </a>            <span class="php-keyword2">mb_substr</span>(
 </span><span id="318" class="l"><a class="l" href="#318">318: </a>                <span class="php-var">$this</span>-&gt;string,
 </span><span id="319" class="l"><a class="l" href="#319">319: </a>                <span class="php-var">$end</span> + <span class="php-num">1</span>,
-</span><span id="320" class="l"><a class="l" href="#320">320: </a>                <span class="php-keyword1">null</span>,
+</span><span id="320" class="l"><a class="l" href="#320">320: </a>                <span class="php-var">$this</span>-&gt;length(),
 </span><span id="321" class="l"><a class="l" href="#321">321: </a>                <span class="php-var">$this</span>-&gt;encoding
 </span><span id="322" class="l"><a class="l" href="#322">322: </a>            );
 </span><span id="323" class="l"><a class="l" href="#323">323: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
@@ -423,7 +423,7 @@
 </span><span id="347" class="l"><a class="l" href="#347">347: </a>            <span class="php-keyword2">mb_substr</span>(
 </span><span id="348" class="l"><a class="l" href="#348">348: </a>                <span class="php-var">$this</span>-&gt;string,
 </span><span id="349" class="l"><a class="l" href="#349">349: </a>                <span class="php-var">$index</span> + <span class="php-num">1</span>,
-</span><span id="350" class="l"><a class="l" href="#350">350: </a>                <span class="php-keyword1">null</span>,
+</span><span id="350" class="l"><a class="l" href="#350">350: </a>                <span class="php-var">$this</span>-&gt;length(),
 </span><span id="351" class="l"><a class="l" href="#351">351: </a>                <span class="php-var">$this</span>-&gt;encoding
 </span><span id="352" class="l"><a class="l" href="#352">352: </a>            );
 </span><span id="353" class="l"><a class="l" href="#353">353: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
