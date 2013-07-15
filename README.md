@@ -79,8 +79,8 @@ $stringBuilder->setLength(14, '!'); // string("Hello world!!!")
 
 // trim contents
 $stringBuilder->trim('!'); // string("Hello world")
-$stringBuilder->leftTrim('He'); // string("llo world")
-$stringBuilder->rightTrim('dl'); // string("llo wor")
+$stringBuilder->trimLeft('He'); // string("llo world")
+$stringBuilder->trimRight('dl'); // string("llo wor")
 
 // reverse content
 $stringBuilder->reverse(); // string("row oll")
