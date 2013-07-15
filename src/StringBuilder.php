@@ -16,11 +16,15 @@
 class StringBuilder
 {
 	/**
+	 * The current sequence.
+	 * 
 	 * @var string
 	 */
 	protected $string;
 
 	/**
+	 * The current sequence encoding.
+	 *
 	 * @var string
 	 */
 	protected $encoding;
@@ -174,7 +178,7 @@ class StringBuilder
 	 * @param int $start
 	 * @param int $end
 	 *
-	 * @return string
+	 * @return StringBuilder
 	 * @throws OutOfBoundsException
 	 */
 	public function substring($start, $end = null)
@@ -204,7 +208,7 @@ class StringBuilder
 	 *
 	 * @param string $string
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function append($string)
 	{
@@ -219,7 +223,7 @@ class StringBuilder
 	 * @param int    $offset
 	 * @param string $string
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 * @throws OutOfBoundsException
 	 */
 	public function insert($offset, $string)
@@ -254,7 +258,7 @@ class StringBuilder
 	 * @param int    $end
 	 * @param string $string
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 * @throws OutOfBoundsException
 	 */
 	public function replace($start, $end, $string)
@@ -289,6 +293,7 @@ class StringBuilder
 	 * @param int $start Start of substring.
 	 * @param int $end   End of substring.
 	 *
+	 * @return StringBuilder
 	 * @throws OutOfBoundsException
 	 */
 	public function delete($start, $end)
@@ -320,7 +325,7 @@ class StringBuilder
 	 *
 	 * @param int $index
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 * @throws OutOfBoundsException
 	 */
 	public function deleteCharAt($index)
@@ -348,7 +353,7 @@ class StringBuilder
 	/**
 	 * Reverse the sequence.
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function reverse()
 	{
@@ -369,7 +374,7 @@ class StringBuilder
 	 * @param int    $newLength
 	 * @param string $padding
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function setLength($newLength, $padding = ' ')
 	{
@@ -393,7 +398,7 @@ class StringBuilder
 	 *
 	 * @param string|null $characters
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function trim($characters = null)
 	{
@@ -406,7 +411,7 @@ class StringBuilder
 	 *
 	 * @param string|null $characters
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function trimLeft($characters = null)
 	{
@@ -419,7 +424,7 @@ class StringBuilder
 	 *
 	 * @param string|null $characters
 	 *
-	 * @return $this
+	 * @return StringBuilder
 	 */
 	public function trimRight($characters = null)
 	{
