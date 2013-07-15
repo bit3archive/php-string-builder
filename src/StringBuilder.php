@@ -190,7 +190,10 @@ class StringBuilder
 			throw new OutOfBoundsException();
 		}
 
-		return new StringBuilder(mb_substr($start, $end !== null ? $end + 1 : null));
+		$string = mb_substr($this->string, $start, $end !== null ? $end + 1 : null, $this->encoding);
+		$stringBuilder = new StringBuilder($string);
+		$stringBuilder->setEncoding($this->encoding);
+		return $stringBuilder;
 	}
 
 	/**
