@@ -247,7 +247,7 @@ class StringBuilder
 			$string .
 			mb_substr(
 				$this->string,
-				$offset + 1,
+				$offset,
 				null,
 				$this->encoding
 			);
