@@ -83,7 +83,7 @@ class StringBuilder
 	public function startsWith($string)
 	{
 		$string = static::_convertString($string, $this->encoding);
-		return $string === $this->substring(0, mb_strlen($string));
+		return $string === $this->substring(0, mb_strlen($string, $this->encoding)-1)->__toString();
 	}
 
 	/**
@@ -96,7 +96,7 @@ class StringBuilder
 	public function endsWith($string)
 	{
 		$string = static::_convertString($string, $this->encoding);
-		return $string === $this->substring($this->length() - mb_strlen($string));
+		return $string === $this->substring($this->length() - mb_strlen($string, $this->encoding))->__toString();
 	}
 
 	/**
