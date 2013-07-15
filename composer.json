@@ -1,26 +1,26 @@
 {
-	"name":"bit3/php-string-builder",
-	"description":"Java like StringBuilder implementation for PHP",
-	"keywords":["string"],
-	"license":"LGPL-3.0+",
-	"authors":[
+	"name": "bit3/php-string-builder",
+	"description": "Java like StringBuilder implementation for PHP",
+	"keywords": ["string"],
+	"license": "LGPL-3.0+",
+	"authors": [
 		{
-			"name":"Tristan Lins",
-			"email":"tristan.lins@bit3.de",
-			"homepage":"http://bit3.de",
-			"role":"Developer"
+			"name": "Tristan Lins",
+			"email": "tristan.lins@bit3.de",
+			"homepage": "http://bit3.de",
+			"role": "Developer"
 		}
 	],
-	"support":{
-		"email":"info@bit3.de",
-		"issues":"https://github.com/bit3/php-string-builder/issues",
-		"source":"https://github.com/bit3/php-string-builder"
+	"support": {
+		"email": "info@bit3.de",
+		"issues": "https://github.com/bit3/php-string-builder/issues",
+		"source": "https://github.com/bit3/php-string-builder"
 	},
-	"require":{
-		"php":">=5.3"
+	"require": {
+		"php": ">=5.3"
 	},
-	"autoload":{
-		"classmap":[
+	"autoload": {
+		"classmap": [
 			"src/"
 		]
 	},
