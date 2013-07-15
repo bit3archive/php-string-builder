@@ -76,7 +76,7 @@ class StringBuilder
 	 *
 	 * @return bool
 	 */
-	public function startWith($string)
+	public function startsWith($string)
 	{
 		$string = static::_convertString($string, $this->encoding);
 		return $string === $this->substring(0, mb_strlen($string));
@@ -89,7 +89,7 @@ class StringBuilder
 	 *
 	 * @return bool
 	 */
-	public function endWith($string)
+	public function endsWith($string)
 	{
 		$string = static::_convertString($string, $this->encoding);
 		return $string === $this->substring($this->length() - mb_strlen($string));
@@ -136,18 +136,6 @@ class StringBuilder
 	}
 
 	/**
-	 * Check if this sequence contains the given string.
-	 *
-	 * @param string $string
-	 *
-	 * @return bool
-	 */
-	public function contains($string)
-	{
-		return $this->indexOf($string) !== false;
-	}
-
-	/**
 	 * Return the last occurrence of a string in the sequence.
 	 *
 	 * @param string   $string
@@ -166,6 +154,39 @@ class StringBuilder
 		}
 
 		return mb_strrpos($this->string, $string, $offset, $this->encoding);
+	}
+
+	/**
+	 * Check if this sequence contains the given string.
+	 *
+	 * @param string $string
+	 *
+	 * @return bool
+	 */
+	public function contains($string)
+	{
+		return $this->indexOf($string) !== false;
+	}
+
+	/**
+	 * Return a substring of this sequence.
+	 *
+	 * @param int $start
+	 * @param int $end
+	 *
+	 * @return string
+	 * @throws OutOfBoundsException
+	 */
+	public function substring($start, $end = null)
+	{
+		$start = (int) $start;
+		$end   = $end !== null ? (int) $end : null;
+
+		if ($start < 0 || $start >= $this->length() || $end !== null && ($end < 0 || $end >= $this->length())) {
+			throw new OutOfBoundsException();
+		}
+
+		return new StringBuilder(mb_substr($start, $end !== null ? $end + 1 : null));
 	}
 
 	/**
@@ -345,18 +366,19 @@ class StringBuilder
 	 * Set the length of this sequence.
 	 * If the sequence is shorter, than it will be pad with spaces.
 	 *
-	 * @param int $newLength
+	 * @param int    $newLength
+	 * @param string $padding
 	 *
 	 * @return $this
 	 */
-	public function setLength($newLength)
+	public function setLength($newLength, $padding = ' ')
 	{
 		$newLength     = (int) $newLength;
 		$currentLength = $this->length();
 
 		if ($newLength != $currentLength) {
 			while ($newLength > $this->length()) {
-				$this->string .= ' ';
+				$this->string .= $padding;
 			}
 			if ($newLength < $this->length()) {
 				$this->string = mb_substr($this->string, 0, $newLength);
@@ -364,27 +386,6 @@ class StringBuilder
 		}
 
 		return $this;
-	}
-
-	/**
-	 * Return a substring of this sequence.
-	 *
-	 * @param int $start
-	 * @param int $end
-	 *
-	 * @return string
-	 * @throws OutOfBoundsException
-	 */
-	public function substring($start, $end = null)
-	{
-		$start = (int) $start;
-		$end   = $end !== null ? (int) $end : null;
-
-		if ($start < 0 || $start >= $this->length() || $end !== null && ($end < 0 || $end >= $this->length())) {
-			throw new OutOfBoundsException();
-		}
-
-		return new StringBuilder(mb_substr($start, $end !== null ? $end + 1 : null));
 	}
 
 	/**
@@ -442,7 +443,7 @@ class StringBuilder
 			$inputEncoding = $string->getEncoding();
 		}
 		else {
-			$inputEncoding = mb_detect_encoding($string);
+			$inputEncoding = mb_detect_encoding((string) $string);
 		}
 		$string = (string) $string;
 		if ($inputEncoding != $outputEncoding) {
