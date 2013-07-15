@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class StringBuilder | bit3/php-string-builder</title>
+
+	<script type="text/javascript" src="resources/combined.js?3245353428"></script>
+	<script type="text/javascript" src="elementlist.js?1341072023"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-StringBuilder.html">StringBuilder</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class StringBuilder</h1>
+
+
+	<div class="description">
+	
+<p>StringBuilder for PHP provide string manipulation logic in an object.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Copyright:</b>
+				bit3 UG 2013<br />
+				<b>License:</b>
+				<a href="LGPL-3.0+">LGPL-3.0+</a><br />
+				<b>Author:</b>
+				Tristan Lins &lt;<a
+href="mailto:tristan.lins&#64;bit3.de">tristan.lins&#64;<!---->bit3.de</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-StringBuilder.html#13-454" title="Go to source code">src/StringBuilder.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-StringBuilder.html#28-36" title="Go to source code">__construct</a>( <span>string|null <var>$string</var> = <span class="php-keyword1">null</span></span>, <span>string|null <var>$encoding</var> = <span class="php-quote">'UTF-8'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string|null</code><br>$string The initial sequence.</dd>
+					<dt><var>$encoding</var></dt>
+					<dd><code>string|null</code><br>$encoding The encoding of the sequence.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEncoding" id="_setEncoding">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEncoding">#</a>
+		<code><a href="source-class-StringBuilder.html#38-48" title="Go to source code">setEncoding</a>( <span>string <var>$encoding</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the encoding of this sequence. Warning: This will not convert an existing
+sequence!</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the encoding of this sequence. Warning: This will not convert an existing
+sequence!</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$encoding</var></dt>
+					<dd><code>string</code><br>$encoding</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="changeEncoding" id="_changeEncoding">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_changeEncoding">#</a>
+		<code><a href="source-class-StringBuilder.html#50-60" title="Go to source code">changeEncoding</a>( <span>mixed <var>$encoding</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert this sequence into another encoding.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert this sequence into another encoding.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$encoding</var></dt>
+					<dd><code>mixed</code><br>$encoding</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEncoding" id="_getEncoding">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEncoding">#</a>
+		<code><a href="source-class-StringBuilder.html#62-70" title="Go to source code">getEncoding</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the encoding of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the encoding of this sequence.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startsWith" id="_startsWith">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_startsWith">#</a>
+		<code><a href="source-class-StringBuilder.html#72-83" title="Go to source code">startsWith</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if this sequence starts with a given string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if this sequence starts with a given string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endsWith" id="_endsWith">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_endsWith">#</a>
+		<code><a href="source-class-StringBuilder.html#85-96" title="Go to source code">endsWith</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if this sequence ends with a given string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if this sequence ends with a given string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="charAt" id="_charAt">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_charAt">#</a>
+		<code><a href="source-class-StringBuilder.html#98-115" title="Go to source code">charAt</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the character at the given position in the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the character at the given position in the sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>$index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="indexOf" id="_indexOf">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_indexOf">#</a>
+		<code><a href="source-class-StringBuilder.html#117-136" title="Go to source code">indexOf</a>( <span>string <var>$string</var></span>, <span>integer|null <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first occurrence of a string in the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first occurrence of a string in the sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer|null</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lastIndexOf" id="_lastIndexOf">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lastIndexOf">#</a>
+		<code><a href="source-class-StringBuilder.html#138-157" title="Go to source code">lastIndexOf</a>( <span>string <var>$string</var></span>, <span>integer|null <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the last occurrence of a string in the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the last occurrence of a string in the sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer|null</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_contains">#</a>
+		<code><a href="source-class-StringBuilder.html#159-169" title="Go to source code">contains</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if this sequence contains the given string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if this sequence contains the given string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="substring" id="_substring">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_substring">#</a>
+		<code><a href="source-class-StringBuilder.html#171-190" title="Go to source code">substring</a>( <span>integer <var>$start</var></span>, <span>integer <var>$end</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return a substring of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return a substring of this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start</dd>
+					<dt><var>$end</var></dt>
+					<dd><code>integer</code><br>$end</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="length" id="_length">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_length">#</a>
+		<code><a href="source-class-StringBuilder.html#192-200" title="Go to source code">length</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the length of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the length of this sequence.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="append" id="_append">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_append">#</a>
+		<code><a href="source-class-StringBuilder.html#202-214" title="Go to source code">append</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Append a string to the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Append a string to the sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-StringBuilder.html#216-248" title="Go to source code">insert</a>( <span>integer <var>$offset</var></span>, <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Insert a string into the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Insert a string into the sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace" id="_replace">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replace">#</a>
+		<code><a href="source-class-StringBuilder.html#250-284" title="Go to source code">replace</a>( <span>integer <var>$start</var></span>, <span>integer <var>$end</var></span>, <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replace a substring by another string in this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replace a substring by another string in this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start</dd>
+					<dt><var>$end</var></dt>
+					<dd><code>integer</code><br>$end</dd>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-StringBuilder.html#286-316" title="Go to source code">delete</a>( <span>integer <var>$start</var></span>, <span>integer <var>$end</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove the characters in a substring of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove the characters in a substring of this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start Start of substring.</dd>
+					<dt><var>$end</var></dt>
+					<dd><code>integer</code><br>$end End of substring.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteCharAt" id="_deleteCharAt">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteCharAt">#</a>
+		<code><a href="source-class-StringBuilder.html#318-346" title="Go to source code">deleteCharAt</a>( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete the character at the index, the sequence will be shorten by one.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete the character at the index, the sequence will be shorten by one.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>$index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>OutOfBoundsException</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reverse" id="_reverse">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reverse">#</a>
+		<code><a href="source-class-StringBuilder.html#348-363" title="Go to source code">reverse</a>( )</code>
+
+		<div class="description short">
+			
+<p>Reverse the sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reverse the sequence.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLength" id="_setLength">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLength">#</a>
+		<code><a href="source-class-StringBuilder.html#365-389" title="Go to source code">setLength</a>( <span>integer <var>$newLength</var></span>, <span>string <var>$padding</var> = <span class="php-quote">' '</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the length of this sequence. If the sequence is shorter, than it will be
+pad with spaces.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the length of this sequence. If the sequence is shorter, than it will be
+pad with spaces.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$newLength</var></dt>
+					<dd><code>integer</code><br>$newLength</dd>
+					<dt><var>$padding</var></dt>
+					<dd><code>string</code><br>$padding</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trim" id="_trim">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trim">#</a>
+		<code><a href="source-class-StringBuilder.html#391-402" title="Go to source code">trim</a>( <span>string|null <var>$characters</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Trim characters from the left and right side of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Trim characters from the left and right side of this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$characters</var></dt>
+					<dd><code>string|null</code><br>$characters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trimLeft" id="_trimLeft">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trimLeft">#</a>
+		<code><a href="source-class-StringBuilder.html#404-415" title="Go to source code">trimLeft</a>( <span>string|null <var>$characters</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Trim characters from the left side of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Trim characters from the left side of this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$characters</var></dt>
+					<dd><code>string|null</code><br>$characters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trimRight" id="_trimRight">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trimRight">#</a>
+		<code><a href="source-class-StringBuilder.html#417-428" title="Go to source code">trimRight</a>( <span>string|null <var>$characters</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Trim characters from the right side of this sequence.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Trim characters from the right side of this sequence.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$characters</var></dt>
+					<dd><code>string|null</code><br>$characters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-StringBuilder.html#430-438" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the string representation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the string representation.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_convertString" id="__convertString">
+
+		<td class="attributes"><code>
+			 protected static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__convertString">#</a>
+		<code><a href="source-class-StringBuilder.html#440-453" title="Go to source code">_convertString</a>( <span>mixed <var>$string</var></span>, <span>mixed <var>$outputEncoding</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="string" id="$string">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-StringBuilder.html#18-21" title="Go to source code"><var>$string</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$string" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="encoding" id="$encoding">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-StringBuilder.html#23-26" title="Go to source code"><var>$encoding</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$encoding" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		bit3/php-string-builder API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
